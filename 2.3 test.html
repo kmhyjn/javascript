@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 
+    let a = prompt('첫 번째 숫자를 입력해주세요.')
+    a = Number(a) //문자열을 숫자로 변환
+    let b = prompt('두 번째 숫자를 입력해주세요.')
+    b = Number(b) //문자열을 숫자로 변환
+    */
+
+    // prompt 결과 -> Number(a) -> a
+    const a = Number(prompt('첫 번째 숫자를 입력해주세요.'))
+    const b = Number(prompt('두 번째 숫자를 입력해주세요.'))
+
+    alert(`${a} + ${b} = ${a+b}`)
+
+    // 문자열 -> 숫자
+    "123" -> 123
+    Number("안녕하세요") -> 숫자!
+    Not a Number -> NaN
+    - typeof(NaN) -> "Number"
+
+    // 숫자 -> 문자열 OK
+    123 -> "123"
+
+    // 불 -> 문자열
+    String(true) -> "true"
+    String(false) -> "false"
+
+    // 불 -> 숫자
+    Number(true) -> 1
+    Number(false) -> 0
+
+    1 -> 켜져있다, 존재한다.
+    0 -> 꺼져있다, 존재하지 않는다.
+
+    // 다른 자료형 -> 불
+    5가지 경우 -> false
+    0, NaN, "", null, undefined
+
+    이외의 경우 -> true
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

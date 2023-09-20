@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 예제3번: 숫자를 입력받아 cm를 inch 단위로 변환하여 출력하는 프로그램
+    // 1cm = 0.393701inch
+
+    // 숫자를 입력 받습니다.
+    const input1 = Number(prompt('cm 단위의 숫자를 입력해주세요.'))
+
+    // 입력을 숫자로 변경하고 inch 단위로 변경합니다.
+    const output1 = input1 * 0.393701
+
+    // 출력합니다.
+    alert(`${input1}cm는 ${output1}inch 입니다.`)
+
+    // 예제4번: 원의 반지름을 입력받아 원의 넓이와 둘레를 구하는 프로그램
+    // 넓이 = 3.14 * 반지름 * 반지름, 둘레 = 2 * 3.14 * 반지름
+
+    // 숫자를 입력 받습니다.
+    const input2 = Number(prompt(`원의 반지름을 입력해주세요.`))
+    const output2 = 3.14 * input2 * input2  //넓이
+    const output3 = 2 * 3.14 * input2 //둘레
+
+    // 출력합니다.
+    alert(`원의 반지름: ${input2}, 원의 넓이: ${output2}, 원의 둘레: ${output3}`)
+
+    // 예제5번: 현재 환율을 기반으로 사용자에게 숫자를 입력받아 달러 -> 원화
+    // 1달러 = 1207원
+
+    // 숫자를 입력 받습니다.
+    const input3 = Number(prompt(`달러 단위의 숫자를 입력하세요.`))
+    const output4 = input3 * 1207
+
+    // 출력합니다.
+    alert(`달러 : \$${input3} -> 원화 : ${output4}원`)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
