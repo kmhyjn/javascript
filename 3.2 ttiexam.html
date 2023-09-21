@@ -1,0 +1,32 @@
+<script>
+  const rawInput = prompt('태어난 해를 입력해주세요.','')
+  const year = Number(rawInput)
+
+  let 간
+  if (year % 10 === 0)      { 간 =  '경'}
+  else if (year % 10 === 1) { 간 =  '신'}
+  else if (year % 10 === 2) { 간 =  '임'}
+  else if (year % 10 === 3) { 간 =  '계'}
+  else if (year % 10 === 4) { 간 =  '갑'}
+  else if (year % 10 === 5) { 간 =  '을'}
+  else if (year % 10 === 6) { 간 =  '병'}
+  else if (year % 10 === 7) { 간 =  '정'}
+  else if (year % 10 === 8) { 간 =  '무'}
+  else if (year % 10 === 9) { 간 =  '기'}
+
+  let 띠
+  if (year % 12 === 0)      { 띠 =  '신'}
+  else if (year % 12 === 1) { 띠 =  '유'}
+  else if (year % 12 === 2) { 띠 =  '술'}
+  else if (year % 12 === 3) { 띠 =  '해'}
+  else if (year % 12 === 4) { 띠 =  '자'}
+  else if (year % 12 === 5) { 띠 =  '축'}
+  else if (year % 12 === 6) { 띠 =  '인'}
+  else if (year % 12 === 7) { 띠 =  '묘'}
+  else if (year % 12 === 8) { 띠 =  '진'}
+  else if (year % 12 === 9) { 띠 =  '사'}
+  else if (year % 12 === 10) { 띠 =  '오'}
+  else if (year % 12 === 11) { 띠 =  '미'}
+
+  alert(`${year}년은 ${간}${띠} 년입니다.`)
+</script>
