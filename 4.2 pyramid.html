@@ -1,0 +1,136 @@
+<script>
+  // 1. 별 피라미드 만들기
+
+  /*
+  let output = ''
+
+  output += '*\n'
+  output += '**\n'
+  output += '***\n'
+  output += '****\n'
+  output += '*****\n'
+  output += '******\n'
+  output += '*******\n'
+  output += '********\n'
+  output += '*********\n'
+
+  console.log(output)
+  */
+
+  // 위에서 반복되는 부분 찾기
+  // 1. output +=  9번 반복, \n 9번 반복
+
+  let output = ''
+
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < i+1; j++) {
+    output += '*'
+      
+    }
+    output += '\n'
+  }
+
+  console.log(output)
+
+  // 반복문은 중첩 사용 가능!!
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+      for (let k = 0; k < 10; k++) {
+      }
+    }
+    
+  }
+
+  // 횟수에 숫자 표현식이 올 수 있음!
+  for (let j = 0; j < 횟수; j++) {  }
+  for (let j = 0; j < [표현식]; j++) {  }
+  i + 1
+  2 * i + 1
+
+  // 2. 중첩 반복문으로 별 피라미드 만들기
+
+  let output = ''
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 2*i+1; j++) {
+      output += '*'
+    }
+    output += '\n'
+    
+  }
+
+  console.log(output)
+
+  // 3. 피라미드 앞에 공백 넣기
+  let output = ''
+  for (let i = 0; i < 6; i++) {
+    output += ' '
+    for (let j = 0; j < 2*i+1; j++) {
+      output += '*'
+    }
+    output += '\n'
+    
+  }
+
+  console.log(output)
+
+  //4. 피라미드 앞에 공백 1번줄 1번, 2번줄 2번... 반복해서 넣기
+  let output = ''
+  for (let i = 0; i < 9; i++) {
+    for (let k = 0; k < i + 1; k++) {
+      output += ' '
+    }
+    for (let j = 0; j < (2 * i + 1); j++) {
+      output += '*'
+    }
+    output += '\n'
+    
+    }
+
+  console.log(output)
+
+  //5. 피라미드 앞에 공백 마지막부터 역순으로 공백수 늘리기
+  let output = ''
+  for (let i = 0; i < 9; i++) {
+    for (let k = 0; k < 8 - i; k++) {
+      output += ' '
+    }
+    for (let j = 0; j < (2 * i + 1); j++) {
+      output += '*'
+    }
+    output += '\n'
+    
+    }
+
+  console.log(output)
+
+  // 6. 확인문제 4번
+  let output = ''
+  for (let i = 0; i < 9; i++) {
+    for (let k = 0; k < 9 - i; k++) {
+      output += ' '
+    }
+    for (let j = 0; j < (2 * i + 1); j++) {
+      output += '*'
+    }
+    output += '\n'
+    }
+  for (let i = 0; i < 10; i++) {
+    for (let k = 0; k < i; k++) {
+      output += ' '
+    }
+    for (let j = 0; j < (2 * (9 - i) + 1); j++) {
+      output += '*'
+    }
+    output += '\n'
+    }
+
+    console.log(output)
+
+  // 7. 확인문제 3번
+  let output = 1
+  for (let i = 1; i <= 100; i++) {
+    output *= i
+  }
+
+  console.log(`1~100의 숫자를 모두 곱하면, ${output}입니다.`)
+</script>
