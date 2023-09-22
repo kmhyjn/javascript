@@ -1,0 +1,54 @@
+<script>
+  // for -> let, for of in -> const로 외우기!!
+for (const iterator of object) {
+
+}
+
+for (const key in object) {
+  if (Object.hasOwnProperty.call(object, key)) {
+    const element = object[key];
+  }
+
+  
+}
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
+
+  // forof, forin: 배열 등과 함께 사용하는 녀석
+  const 배열 = ['바나나', '사과', '귤']
+  for (const 요소 of 배열) {
+    console.log(요소)
+    // 바나나 - 사과 - 귤
+  }
+
+  //인덱스 : in이니까 index가 들어간다고 외우기
+  for (const 인덱스 in 배열) {
+    console.log(인덱스, 배열[인덱스])
+    // 0 바나나 1 사과 2 귤
+  }
+
+  // for: 그냥 범용적으로 사용하는 녀석
+  // 특정 횟수로 반복할 때
+  // array.length : 반복을 원하는 횟수
+  for (let i = 0; i < 5; i++) {
+    // 0 1 2 3 4
+    console.log(`${i}번째 반복입니다`)
+  }
+
+  for (let i = 0; i < 5; i++) { console.log(`${i}번째 반복입니다`) }
+  for (let i = 0; i < 10; i += 2) { console.log(`${i}번째 반복입니다`) }
+  for (let i = 0; i < 20; i += 3) { console.log(`${i}번째 반복입니다`) }
+
+  // 역 반복문
+  for (let i = 20; i >= 10; i--) { console.log(`${i}번째 반복입니다`) }
+
+  // for 반복문과 변수 상수
+  for (let i = 0; i < 배열; i++) {
+    const 인덱스 = i
+    const 요소 = 배열[i]
+  }
+  
+</script>
