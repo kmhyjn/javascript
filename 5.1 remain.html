@@ -1,0 +1,44 @@
+<script>
+// API = Application Programming Interface 
+// 애플리케이션 프로그램을 만들 떄의 약속
+
+// 206p 나머지 매개변수 -> 자료형은 무조건 배열
+const 함수 = function (...매개변수) {
+  console.log(매개변수)
+}
+
+함수()        // []
+함수(1)       // [1]
+함수(1,2)     // [1,2]
+함수(1,2,3)   // [1,2,3]
+함수(1,2,3,4) // [1,2,3,4]
+
+const 함수 = function (a, b, ...매개변수) {
+  console.log(a, b, 매개변수)
+}
+
+// a, b에 무엇이 들어가야 하는지 명확하게 알 수 없기 때문에 실행이 되지 않음
+// Uncaught SyntaxError: Rest parameter must be last formal parameter
+const 잘못된예 = function (...매개변수, a, b) {
+
+}
+
+함수()        // undefined undefined []
+함수(1)       // 1 undefined []
+함수(1,2)     // 1 2 []
+함수(1,2,3)   // 1 2 [3]
+함수(1,2,3,4) // 1 2 [3,4]
+
+// 210p 전개 연산자 (함수 호출)
+// 함수를 만들때 사용하는 것이 아닌 함수롤 호출할 때 사용함
+// 이후 배열 복사, 객체 복사 때도 쓰인다.
+
+const 함수 = function (a, b, c) {
+  console.log(a, b, c)
+}
+
+const a = [1, 2, 3]
+함수(a[0], a[1], a[2])
+함수(...a)
+
+</script>

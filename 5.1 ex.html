@@ -1,0 +1,66 @@
+<script>
+// 확인문제 1번
+const multiplyAll = function (start, end) {
+  let output = 1
+  for (let i = start; i <= end; i++) {
+    output *= i
+  }
+  return output
+}
+
+console.log(multiplyAll(1, 2))
+console.log(multiplyAll(1, 3))
+
+// 확인문제 2-3
+const max = function (첫번째요소, ...나머지) {
+  if(Array.isArray(첫번째요소)) {
+  let output = 첫번째요소[0]
+  for (const 값 of 첫번째요소) {
+    if (output < 값) {
+      output = 값
+    }
+  }
+  return output
+  } else {
+    let output = 첫번째요소
+    for (const 값 of 나머지) {
+      if (output < 값) {
+        output = 값
+      }
+    }
+    return output
+  }
+}
+
+console.log(`max(배열) : ${max([1,2,3,4])}`)
+console.log(`max(숫자, ...) : ${max(1,2,3,4)}`)
+
+/* 확인문제 2-1
+const max = function (array) {
+  let output = array[0]
+  for (const 값 of array) {
+    if (output < 값) {
+      output = 값
+    }
+  }
+  return output
+}
+
+console.log(max([1,2,3,4]))
+*/
+
+/* 확인문제 2-2
+const max = function (...array) {
+  let output = array[0]
+  for (const 값 of array) {
+    if (output < 값) {
+      output = 값
+    }
+  }
+  return output
+}
+
+console.log(max([1,2,3,4]))
+*/
+
+</script>
