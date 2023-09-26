@@ -1,0 +1,79 @@
+<script>
+// 콜백함수 매개변수로 숫자 하나를 받는 형태
+
+const 테스트 = function (콜백함수) {
+  for (let i = 0; i < 5; i++) {
+    콜백함수(i)
+  }
+}
+
+const 함수 = function (콜백함수의_매개변수) {
+  console.log(`${콜백함수의_매개변수}번째 안녕하세요`)
+}
+
+테스트(함수)
+
+// 배열 대입하기
+const 테스트 = function (배열, 콜백함수) {
+  for (const 값 of 배열) {
+    콜백함수(값)
+  }
+}
+
+const 함수 = function (콜백함수의_매개변수) {
+  console.log(`${콜백함수의_매개변수}번째 안녕하세요`)
+}
+
+테스트([52, 273, 103, 32], 함수)
+
+// 콜백 함수를 활용하는 함수
+// forEach(), filter(), map()
+
+// 화살표 함수
+// (매개변수) => {본문}
+
+// 1. forEach() -> 배열이 갖고 있는 함수(메소드)
+// 단순하게 배열 내부의 요소를 사용해서 콜백 함수를 호출
+// function (value, index, array) {}
+
+const 배열 = [273, 52, 103, 32, 57]
+배열.forEach(function (value, index){
+  console.log(`${index}번째의 값은 ${value}`)
+})
+
+// 2. filter() => 메소드도 배열이 갖고 있는 함수
+// 콜백함수에서 리턴하는 값이 true인 것들만 모아서 새로운 배열을 만드는 함수
+// function(value, index, array) {}
+
+const 배열 = [273, 52, 103, 32, 57]
+console.log(배열.filter(function (value, index) {
+  return true    // (5) [273, 52, 103, 32, 57]
+}))
+
+console.log(배열.filter(function (value, index) {
+  return false   // []
+}))
+
+// --
+let 배열 = [273, 52, 103, 32, 57]
+배열 = 배열.filter(function (value, index) {
+  return value % 2 === 0  // (2) [52, 32]
+})
+
+// 화살표 함수
+배열 = 배열.filter((value, index) => value % 2 === 0)
+console.log(배열)
+
+// 3. map() -> 메소드도 배열이 갖고 있는 함수
+// map() 메소드는 콜백 함수에서 리턴한 값들을 기반으로 새로운 배열을 만드는 함수
+
+let 배열 = [273, 52, 103, 32, 57]
+배열 = 배열.map(function (value, index){
+  return value + "!!"
+})
+
+// 화살표 함수
+배열 = 배열.map((value, index) => value + "!!")
+console.log(배열)
+
+</script>

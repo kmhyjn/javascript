@@ -1,0 +1,55 @@
+<script>
+// 타이머 함수
+// setTimeout()   // 특정한 시간 후에 한 번
+const a = setTimeout(function() {
+  console.log(`setTimeout 함수 입니다!`)
+}, 1000)
+// setInterval()  // 특정한 시간마다 (ex. 시계)
+const b = setInterval(function() {
+  console.log(`setInterval 함수 입니다!`)
+}, 1000)
+
+console.log(a, b)
+
+// 타이머 제거 함수
+// clearTimeout()
+clearTimeout(a)
+// clearInterval()
+clearInterval(b)
+
+// 즉시 호출 함수 IIFE(Immediately Invoked Function Expression)
+// 함수를 만들고 즉시 호출하는 함수
+// (function () {})()
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script>
+    (function () {
+      const a = 10
+      console.log(a)
+    })()
+  </script>
+  <script>
+    (function () {
+      const a = 20
+      console.log(a)
+    })()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+// 엄격모드
+// 블록 가장 위쪽에 'use strict'
+
+(function () {
+  'use strict'
+})()
+</script>
