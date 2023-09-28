@@ -1,0 +1,22 @@
+<script>
+// 객체의 키와 값을 정적으로 생성한다!
+const pet = {
+  name: '구름',
+  age: 8
+}
+// 객체의 키와 값을 동적으로 생성한다!
+pet.color = 'brown'
+
+console.log(pet)  //{name: '구름', age: 8, color: 'brown'}
+
+// 객체의 키와 값을 동적으로 제거한다!
+delete pet.color
+console.log(pet)  //{name: '구름', age: 8}
+
+// pet을 const로 적용했는데 왜 변경이 가능한지?
+// pet ={}
+// pet = ''
+// 이런식으로 되는 것을 막는 것
+// 힙 내에서 지지고 볶는것은 아무 상관이 없다.
+
+</script>

@@ -1,0 +1,21 @@
+<script>
+// 객체
+const array = [100, 20, '문자열', true, function () {}, () => {}]
+console.log(array[0]) // 100
+
+array[0] = 200  // 값 변경
+console.log(array[0]) // 200
+
+const object = {
+  name: '구름',
+  age: 7
+}
+object['name']
+console.log(object.name)     // 현재 이 방법을 많이 사용
+console.log(object.age)
+
+object.name = '별'           // 값 변경
+object.age = 1
+console.log(object.name)
+console.log(object.age)
+</script>

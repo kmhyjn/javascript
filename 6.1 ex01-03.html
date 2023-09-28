@@ -1,0 +1,30 @@
+<script>
+// 확인문제 1번
+const book = {
+  name: '혼자 공부하는 파이썬',
+  price: 10000,
+  publisher: '한빛미디어'
+}
+
+// 확인문제 4번
+const object = {
+  ko: '빵',
+  en: 'bread',
+  ja: '',
+  fr: 'pain',
+  es: 'pan',
+  lang: {
+    ko: '한국어',
+    en: '영어',
+    ja: '일본어',
+    fr: '프랑스어',
+    es: '스페인어'
+  },
+  // lang에 es대입 -> this.lang[lang] -> this.lang[es] -> 스페인어
+  print: function (lang) {
+    console.log(`${this.ko}은/는 ${this.lang[lang]}로/으로 ${this[lang]}입니다.`)
+  }
+}
+
+object.print('es')
+</script>

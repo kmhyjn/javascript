@@ -1,0 +1,38 @@
+<script>
+// 속성과 메소드
+
+// 요소(element)
+const array = [100, 20, '문자열', true, function () {} , () => {}]
+
+// 속성(property)
+const dog = {
+  name: '구름',
+  age: 7,
+
+  // 메서드(method): 객체 내부에 들어있는 함수
+  // 자바스크립트는 메서드도 속성에 포함된다.
+  // -> 객체를 만들고 내부에서 this를 사용할때에는
+  // 화살표함수를 사용하지 않고 무조건 익명함수만 사용한다
+  // 자바스크립트에서는 this.00 형태로 무조건 작성 (this 생략불가)
+
+  // 익명함수
+  // 메서드 내부에서 this를 사용했을때 -> 자기자신(dog)
+  // this 바인딩을 한다(연결한다)
+  bark: function () {
+    console.log(`${this.name}이/가 짖습니다!`)
+    console.log(this) //자기 자신의 객체 출력
+  },
+
+  // 화살표함수
+  // 메서드 내부에서 this를 사용했을때 -> 엉뚱한 값 출력
+  // this 바인딩을 하지 않는다(연결하지 않는다)
+  sleep: () => {
+    console.log(`${dog.name}이/가 잡니다!`)
+    console.log(this) //window 객체 출력
+  }
+}
+
+// 호출 (console.log와 비슷한 형태)
+dog.bark()
+dog.sleep()
+</script>
