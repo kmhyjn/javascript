@@ -1,0 +1,27 @@
+<script>
+// 기본 자료형 -> 스택에 값을 저장
+// 속성과 메서드를 가질 수 없다
+- 숫자
+- 문자열
+- 불
+
+// 객체 자료형 -> 스택과 힙을 연결 -> 속성과 메서드!
+// 속성과 메서드를 가질 수 있다
+- 함수
+- 배열
+- 객체
+- 등등
+
+// 함수는 일급객체다
+// 함수를 객체처럼 쓰는 언어는 함수를 일급 객체로 다룬다 라고 표현
+
+// 프로토타입으로 메소드 추가하기
+String.prototype.value = 10
+
+String.prototype.contain = function (다른문자열) {
+  return this. indexOf(다른문자열) >= 0
+}
+const a = '문자열'
+console.log(`a.contain('문자'): ${a.contain('문자')}`)
+a.contain('문자') //: true
+</script>

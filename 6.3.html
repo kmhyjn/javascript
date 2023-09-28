@@ -1,0 +1,112 @@
+<script>
+// 객체 기본값을 지정하는 내용!
+// status : 기본 매개 변수
+
+/*
+const test = function (name, age, color, status = '이상 없음') {
+  return `${name} : ${age} : ${color} : ${status}`
+}
+
+console.log(test('구름', 7,'갈색'))
+*/
+
+sendMail({
+  from: '구름',
+  to: '별',
+  content: '내용'
+})
+
+const test = function (object) {
+  // 과거(1)
+  object.status = object.status !== undefined ? object.status : '이상 없음'
+  // 과거(2)
+  object.status = object.status ? object.status : '이상 없음'
+  // 과거(3)
+  object.status = object.status || '이상 없음'
+
+  // 현대(1)
+  object = { status: '이상 없음', ...Object }
+  // 현대(2)
+  fun = function ({name, age, color, status = '이상 없음'}) {
+    return `${name} : ${age} : ${color} : ${status}`
+  }
+
+  return `${object.name} : ${object.age} : ${object.color}`
+}
+
+/* console.log(test({
+  name: '구름',
+  age: 7,
+  color: '갈색'
+
+}))
+*/
+
+const dog = {
+  name: '구름',
+  age: 7,
+  color: '갈색'
+}
+
+// 전개 연산자로 객체 기본 매개변수 지정하기
+// (1)
+console.log(dog.name)   // 구름
+console.log(dog.age)    // 7
+console.log(dog.color)  // 갈색
+
+// (2)
+console.log(dog.status) //undefined -> 객체 내부에 정의되지 않은 속성
+
+// 과거(1)
+dog.status !== undefined ? dog.status : '이상 없음'
+// dog.status === undefined ? '이상 없음' : dog.status
+
+// 과거(2): dog.status 빈문자열 or 0과 같이 false 변환되는 값이 오지 않는다면!
+dog.status = dog.status ? dog.status : '이상 없음'
+
+// 과거(3) : 조건부 연산자 + 짧은 조건문은 이때만 사용하므로 외우기
+dog.status = dog.status || '이상 없음'
+
+// 현대(1)
+const dog = {
+  name: '구름',
+  age: 7,
+  color: '갈색',
+  status: '다리가 아파요' // 그대로 출력
+}
+
+  const newDog = {
+  status: '이상 없음',
+  ...dog //위치는 항상 뒤에
+}
+
+console.log(newDog)
+
+// 현대(2)
+const test = function ({
+  name, 
+  age, 
+  color, 
+  status = '이상 없음'
+}) {
+  return `${name} : ${age} : ${color} : ${status}`
+}
+
+console.log(test({
+  name: '구름',
+  age: 7,
+  color: '갈색'
+}))
+
+// 객체에서 속성을 꺼내서 (object.속성)과 같은 형태 사용안하기
+const test = function (object) {
+  const { name, age, color, status } = { status : '이상 없음', ...object }
+
+  return `${name} : ${age} : ${color} : ${status}`
+}
+console.log(test({
+  name: '구름',
+  age: 7,
+  color: '갈색'
+}))
+</script>

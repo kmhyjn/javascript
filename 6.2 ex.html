@@ -1,0 +1,52 @@
+<script>
+// 확인문제 1번
+const num = 52000
+num.원 = function () {
+  return this.valueOf() + '원'
+}
+
+console.log(num.원())
+// 기본 자료형에 메서드를 추가하면 곧바로 사라진다!
+// 오류: Uncaught TypeError: num.원 is not a function
+
+// 1. num을 객체로 만들기
+const num = new Number(52000)
+num.원 = function () {
+  return this.valueOf() + '원'
+}
+console.log(num.원())
+
+// 2. prototype 활용하기
+const num = 52000
+Number.prototype.원 = function () {
+  return this.valueOf() + '원'
+}
+console.log(num.원())
+
+// 확인문제 2번
+function printLang(code) {
+  return printLang._lang[code]
+}
+printLang._lang = {
+  ko: '한국어',
+  en: '영어',
+  ja: '일본어',
+  fr: '프랑스어',
+  es: '스페인어'
+}
+
+console.log('printLang("ko"):', printLang('ko'))
+console.log('printLang("en"):', printLang('en'))
+
+// 확인문제 3번
+Math.sin(90)  // 이렇게 하면 0.89399... 로 출력됨
+
+const degree = 90
+
+// 라디안값 구하기
+const rad = degree * Math.PI / 180
+
+console.log(Math.sin(rad))
+
+
+</script>
